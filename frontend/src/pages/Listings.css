@@ -1,0 +1,104 @@
+/* Page container */
+.listings-container {
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+/* Grid layout */
+.listing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* Card style */
+.listing-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.listing-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Image */
+.listing-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Listing info */
+.listing-info {
+  padding: 15px;
+}
+
+.listing-info h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.listing-price {
+  margin: 5px 0;
+  font-size: 18px;
+  color: #2c7be5;
+  font-weight: bold;
+}
+
+.listing-location {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Details row */
+.listing-details {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.verified {
+  color: green;
+  font-weight: bold;
+}
+
+.not-verified {
+  color: red;
+  font-weight: bold;
+}
+
+/* Loading spinner */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.spinner {
+  width: 45px;
+  height: 45px;
+  border: 5px solid #ddd;
+  border-top-color: #2c7be5;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
